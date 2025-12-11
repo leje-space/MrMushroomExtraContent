@@ -1,6 +1,9 @@
 # Mister Mushroom Extra Content
 
-This mod for **Hollow Knight: Silksong** enhances your encounters with Mister Mushroom, adding a single extra interaction with him at the beginning of the game.
+This mod for **Hollow Knight: Silksong** enhances your encounters with Mister Mushroom, adding two extra interactions:
+
+- **First Encounter**: Early game (before the Moss Mother boss fight)
+- **Second Encounter**: Early game (after obtaining the Silkspear ability, before the Bell Beast boss fight)
 
 ***To Be Continued***
 
@@ -59,7 +62,7 @@ Check log file (`BepInEx/LogOutput.log`) for the following message on game start
 1. Ensure both DLL files are in the `BepInEx/plugins` folder
 2. Verify BepInEx is correctly installed and running
 3. Check the BepInEx log for any errors related to the mod
-4. Make sure you're in the correct game area (early game, before the Moss Mother encounter)
+4. Make sure you're in the correct game area and meet the conditions for each encounter
 
 ## Uninstalling
 To remove the mod, simply delete both DLL files from your `BepInEx/plugins` folder:
@@ -77,6 +80,9 @@ To remove the mod, simply delete both DLL files from your `BepInEx/plugins` fold
 - None currently reported
 
 ## Changelog
+
+### Version 1.1.0
+- Added second encounter with Mister Mushroom
 
 ### Version 1.0.0
 - Initial release

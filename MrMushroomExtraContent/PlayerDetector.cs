@@ -1,4 +1,6 @@
 using System.Collections;
+using Core.FsmUtil;
+using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 
 namespace MrMushroomExtraContent;
@@ -11,7 +13,7 @@ public class PlayerDetector : MonoBehaviour
   {
     try
     {
-      if (!enabled || !Plugin.Phase1ConditionsMet)
+      if (!enabled)
         return;
 
       if (!other.CompareTag("Player"))
@@ -32,8 +34,11 @@ public class PlayerDetector : MonoBehaviour
         return;
       }
 
-      // Proceed to state Appearing
-      fsm.SendEvent("SING");
+      if (fsm.ActiveStateName == "Hidden" || fsm.ActiveStateName == "Disappearing")
+      {
+        // Proceed to state Appearing
+        fsm.SendEvent("SING");
+      }
 
       if (!roared)
       {
@@ -44,6 +49,17 @@ public class PlayerDetector : MonoBehaviour
           Plugin.Logger.LogError("HeroController component not found on player in PlayerDetector");
           return;
         }
+
+        var roarFsm = PlayMakerFSM.FindFsmOnGameObject(hero, "Roar and Wound States");
+        if (roarFsm == null)
+        {
+          Plugin.Logger.LogError("PlayMakerFSM component 'Roar and Wound States' not found on player in PlayerDetector");
+          return;
+        }
+
+        // Face Mr Mushroom
+        var checkTargetDirection = roarFsm.GetAction<CheckTargetDirection>("Roar Lock Start", 14);
+        checkTargetDirection.target.Value = npc;
 
         heroController.StartRoarLockNoRecoil();
         StartCoroutine(StopRoarLockCoroutine(heroController));
@@ -65,5 +81,10 @@ public class PlayerDetector : MonoBehaviour
     {
       heroController.StopRoarLock();
     }
+  }
+
+  private void OnDestroy()
+  {
+    StopAllCoroutines();
   }
 }
