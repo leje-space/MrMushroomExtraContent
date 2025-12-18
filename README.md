@@ -1,9 +1,10 @@
 # Mister Mushroom Extra Content
 
-This mod for **Hollow Knight: Silksong** enhances your encounters with Mister Mushroom, adding two extra interactions:
+This mod for **Hollow Knight: Silksong** enhances your encounters with Mister Mushroom, adding three extra interactions during Acts 1 and 2:
 
 - **First Encounter**: Before the Moss Mother boss fight
 - **Second Encounter**: After obtaining the Silkspear ability, before the Bell Beast boss fight
+- **Third Encounter**: After defeating the Bell Beast, at the entrance to the Hunter's March (before the Skarrgard fight)
 
 ***To Be Continued***
 
@@ -80,6 +81,9 @@ To remove the mod, simply delete both DLL files from your `BepInEx/plugins` fold
 - None currently reported
 
 ## Changelog
+
+### Version 1.2.0
+- Added third encounter with Mister Mushroom
 
 ### Version 1.1.0
 - Added second encounter with Mister Mushroom

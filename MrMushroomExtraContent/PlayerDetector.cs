@@ -36,8 +36,7 @@ public class PlayerDetector : MonoBehaviour
 
       if (fsm.ActiveStateName == "Hidden" || fsm.ActiveStateName == "Disappearing")
       {
-        // Proceed to state Appearing
-        fsm.SendEvent("SING");
+        fsm.SendEvent("APPEAR");
       }
 
       if (!roared)
