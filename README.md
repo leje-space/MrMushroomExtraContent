@@ -1,10 +1,10 @@
 # Mister Mushroom Extra Content
 
-This mod for **Hollow Knight: Silksong** enhances your encounters with Mister Mushroom, adding three extra interactions during Acts 1 and 2:
+This mod for **Hollow Knight: Silksong** enhances your encounters with Mister Mushroom by adding three extra interactions in Acts 1 and 2:
 
-- **First Encounter**: Before the Moss Mother boss fight
-- **Second Encounter**: After obtaining the Silkspear ability, before the Bell Beast boss fight
-- **Third Encounter**: After defeating the Bell Beast, at the entrance to the Hunter's March (before the Skarrgard fight)
+- **First encounter**: before the Moss Mother boss fight
+- **Second encounter**: after obtaining the Silkspear ability, before the Bell Beast boss fight
+- **Third encounter**: after defeating the Bell Beast, at the entrance to the Hunter's March (before the Skarrgard fight)
 
 ***To Be Continued***
 
@@ -23,8 +23,8 @@ This mod for **Hollow Knight: Silksong** enhances your encounters with Mister Mu
    - Download the latest release containing both required DLL files:
      - `space.leje.MrMushroomExtraContent.dll` (main plugin)
      - `Core_FsmUtil.dll` (dependency)
-   - Place both DLL files in the `BepInEx/plugins` folder in your game directory
-   - The plugin will load automatically when you start the game
+   - Place both DLL files into the `BepInEx/plugins` folder in your game directory
+   - The plugin loads automatically when you start the game
 
 ## Building from Source
 
@@ -72,9 +72,9 @@ To remove the mod, simply delete both DLL files from your `BepInEx/plugins` fold
 
 ## Compatibility
 
-- **Game Version**: Tested with Hollow Knight: Silksong v1.0.29315
-- **BepInEx**: Requires version 5.x
-- **Other Mods**: Should be compatible with most mods, but conflicts may occur with other mods that modify Mister Mushroom or FSM behavior
+- Tested with **Hollow Knight: Silksong v1.0.29315**
+- Requires **BepInEx 5.x**
+- Should be compatible with most mods, but conflicts may occur with other mods that modify Mister Mushroom or FSM behavior
 
 ## Known Issues
 
